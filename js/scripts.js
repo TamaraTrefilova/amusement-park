@@ -1,15 +1,15 @@
 $(function(){
   $("form").submit(function(event) {
     event.preventDefault();
-    $(".short, .tall, .xtall").hide();
+    $(".short, .tall, .xtall").removeClass("color");
     var height = parseInt($("input#height").val());
     // alert(height);
     if (height < 36) {
-      $(".short").show();
+      $(".short").addClass("color");
     } else if (height >= 36 && height < 78) {
-      $(".tall").show();
+        $(".tall").addClass("color");
     } else {
-      $(".xtall").show();
+      $(".xtall").addClass("color");
     }
   });
 });
